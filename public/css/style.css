@@ -1,0 +1,36 @@
+/* #713e5a - plum
+#63a375 - seamoss
+#edc79b - cream
+#d57a66 - orange
+#ca6680 - salmon */
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  color: #edc79b;
+  background-color: #d57a66;
+}
+
+
+
+
+
+
+
+
+
+
+footer {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
+  color: #edc79b;
+  background-color: #d57a66;
+}
