@@ -1,0 +1,14 @@
+{{#if loggedIn}}
+<section class="blog">
+  <h3>{{blog.title}}</h3>
+  <div class="blog-details">
+    <p>By: {{blog.post_creator}}</p>
+    <p>Published: {{blog.publish_date}}</p>
+    <p></p>
+    <p>{{blog.contents}}</p>
+    <p>{{blog.library_id}}</p>
+  </div>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
