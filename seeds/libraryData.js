@@ -2,19 +2,19 @@ const { Library } = require('../models');
 
 const librarydata = [
   {
-    name: 'How-to Post',
+    name: 'Future of Work',
   },
   {
-    name: 'Product Reviews',
+    name: 'Social Media',
   },
   {
-    name: 'Current Trends',
+    name: 'Tech Policy',
   },
   {
-    name: 'Video Tutorials',
+    name: 'Privacy',
   },
   {
-    name: 'Service Updates',
+    name: 'Innovation',
   },
 ];
 
