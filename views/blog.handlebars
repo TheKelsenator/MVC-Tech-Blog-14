@@ -1,4 +1,9 @@
 {{#if loggedIn}}
+
+{{#each blogs as |blog|}}
+{{> blog-details}}
+{{/each}}
+
 <section class="blog">
   <h3>{{blog.title}}</h3>
   <div class="blog-details">
@@ -10,5 +15,5 @@
   </div>
 </section>
 {{else}}
-<a href="/login">You must login first to view this page</a>
+<a class="login-message" href="/login">You must login first to view this page</a>
 {{/if}}

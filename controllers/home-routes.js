@@ -4,7 +4,7 @@ const { Library, Blog } = require('../models');
 // GET all libraries for homepage
 router.get('/', async (req, res) => {
   try {
-    const dbLibraryData = await Library.findAll({
+    const libraryData = await Library.findAll({
       include: [
         {
           model: Blog,
@@ -13,12 +13,12 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const libraries = dbLibraryData.map((library) =>
+    const libraries = libraryData.map((library) =>
       library.get({ plain: true })
     );
-    res.render('homepage', {
+    res.render('home', {
       libraries,
-      loggedIn: req.session.loggedIn,
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 // GET one library
 router.get('/library/:id', async (req, res) => {
   try {
-    const dbLibraryData = await Library.findByPk(req.params.id, {
+    const libraryData = await Library.findByPk(req.params.id, {
       include: [
         {
           model: Blog,
@@ -45,8 +45,8 @@ router.get('/library/:id', async (req, res) => {
       ],
     });
 
-    const library = dbLibraryData.get({ plain: true });
-    res.render('library', { library, loggedIn: req.session.loggedIn });
+    const library = libraryData.get({ plain: true });
+    res.render('library', { library, logged_in: req.session.logged_in });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -56,10 +56,10 @@ router.get('/library/:id', async (req, res) => {
 // GET one blog
 router.get('/blog/:id', async (req, res) => {
   try {
-    const dbBlogData = await Blog.findByPk(req.params.id);
+    const blogData = await Blog.findByPk(req.params.id);
 
-    const blog = dbBlogData.get({ plain: true });
-    res.render('blog', { blog, loggedIn: req.session.loggedIn });
+    const blog = blogData.get({ plain: true });
+    res.render('blog', { blog, logged_in: req.session.logged_in});
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -68,7 +68,7 @@ router.get('/blog/:id', async (req, res) => {
 
 // Login route
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
   }

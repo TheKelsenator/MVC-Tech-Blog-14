@@ -13,24 +13,78 @@ header {
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: start;
+  font-size: 30px;
+  font-weight: bold;
   color: #edc79b;
   background-color: #d57a66;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
 }
 
+.nav-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: space-around;
+  font-size: 25px;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+}
 
+body {
+  background-color: #edc79b;
+}
 
+.library-card {
+  margin-top: 50px;
+  margin-left: 275px;
+  margin-right: 275px;
+  margin-bottom: 35px;
+  background-color: #edc79b;
+  border-color: #713e5a;
+  border-radius: 15px;
+  border-width: 6px;
+}
 
+.library-name {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  color: #d57a66;
+  font-size: 40px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
 
+.login-card {
+  margin-top: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-bottom: 35px;
+  padding: 50px;
+  border-color: #713e5a;
+  border-radius: 15px;
+  border-width: 6px;
+}
 
-
-
-
+.login-message {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
 
 footer {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
   color: #edc79b;
   background-color: #d57a66;
+  margin-top: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
