@@ -1,0 +1,27 @@
+[
+  {
+    "username": "Rani Molla",
+    "email": "rani@yahoo.com",
+    "password": "password123"
+  },
+  {
+    "username": "Sara Morrison",
+    "email": "sara@gmail.com",
+    "password": "password123"
+  },
+  {
+    "username": "Shirin Ghaffary",
+    "email": "shirin@aol.com",
+    "password": "password123"
+  },
+  {
+    "username": "Phil Edwards",
+    "email": "phil@yahoo.com",
+    "password": "password123"
+  },
+  {
+    "username": "Sigal Samuel",
+    "email": "sigal@gmail.com",
+    "password": "password123"
+  }
+]

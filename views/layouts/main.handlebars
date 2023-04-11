@@ -12,20 +12,20 @@
 
   <body>
     <header>
-      <h1>The Tech Blog</h1>
+      <h1 class="home">The Tech Blog</h1>
     </header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/dashboard">Dashboard</a>
-      <a href="/posts">My Posts</a>
+    <nav class="nav-bar">
+      <!-- Conditionally render login or logout links -->
       {{#if loggedIn}}
+      <a href="/">Dashboard</a>
+      <a href="/posts">My Posts</a>
       <button id="logout" class="btn-no-style">Logout</button>
       {{else}}
       <a href="/login">Login</a>
       {{/if}}
     </nav>
     <main>
-      <div class="library">
+      <div>
         {{{body}}}
       </div>
     </main>
