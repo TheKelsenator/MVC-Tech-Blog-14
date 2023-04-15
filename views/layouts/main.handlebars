@@ -8,6 +8,7 @@
     <title>Tech Blog</title>
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/blog.css">
+    <link rel="stylesheet" href="/css/posts.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
@@ -16,10 +17,10 @@
       <h1>The Tech Blog</h1>
     </header>
     <nav class="nav-bar">
-      {{#if logged_in}}
       <a href="/">Dashboard</a>
-      <a href="/posts">My Posts</a>
-      <button id="logout" class="btn-no-style">Logout</button>
+      {{#if logged_in}}
+      <a href="/post">My Posts</a>
+      <button id="logout">Logout</button>
       {{else}}
       <a href="/login">Login</a>
       {{/if}}

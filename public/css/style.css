@@ -78,6 +78,13 @@ body {
   align-items: center;
 }
 
+button {
+  color: #0077ff;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
 footer {
   display: flex;
   flex-wrap: nowrap;

@@ -1,16 +1,21 @@
 <section class="card blog-card">
   {{#if logged_in}}  
+  <div class="library-header">
+    <h1>{{library.name}}</h1>
+  </div>
   <div class="blog-header">  
     <h3>{{blog.title}}</h3>
   </div>
   <div>
     {{#each blog as |blog|}}
     {{/each}}
-    <div class="blog-details">
+    <div class="blog-content">
       <p>{{blog.contents}}</p>
     </div>
+    <div class="blog-details">
     <p>By: {{blog.username}}</p>
     <p>Published: {{blog.publish_date}}</p>
+    </div>
   </div>
 </section>
 {{else}}
