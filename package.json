@@ -2,7 +2,7 @@
   "name": "bronze-mouse-14",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
@@ -23,6 +23,7 @@
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
     "mysql2": "^2.2.5",
+    "node": "^19.8.1",
     "sequelize": "^6.3.5",
     "tail": "^2.2.6"
   },
