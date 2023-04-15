@@ -19,6 +19,10 @@ Blog.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -26,8 +30,8 @@ Blog.init(
         key: 'id',
       },
     },
-    date_created: {
-      type: DataTypes.DATE,
+    publish_date: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
     library_id: {

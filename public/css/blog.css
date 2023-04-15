@@ -1,0 +1,15 @@
+.blog-card {
+  display: block;
+  align-items: center;
+  border-width: 6px;
+  border-radius: 15px;
+  border-color: #713e5a;
+  background-color: #edc79b;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+}

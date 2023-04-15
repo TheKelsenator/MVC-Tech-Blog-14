@@ -7,16 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Blog</title>
     <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/blog.css">
     <link rel="stylesheet" href="/css/style.css">
   </head>
 
   <body>
     <header>
-      <h1 class="home">The Tech Blog</h1>
+      <h1>The Tech Blog</h1>
     </header>
     <nav class="nav-bar">
-      <!-- Conditionally render login or logout links -->
-      {{#if loggedIn}}
+      {{#if logged_in}}
       <a href="/">Dashboard</a>
       <a href="/posts">My Posts</a>
       <button id="logout" class="btn-no-style">Logout</button>
@@ -29,7 +29,7 @@
         {{{body}}}
       </div>
     </main>
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
 
