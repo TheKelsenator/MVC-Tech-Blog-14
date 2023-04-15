@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 // CREATE new post
-router.post('/post', async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newBlog = await Blog.create({
       ...req.body,
@@ -53,4 +53,6 @@ router.delete('/:id', async (req, res) => {
     res.status(500).json(error);
   }
 });
+
+
 module.exports = router;
