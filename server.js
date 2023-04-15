@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3006;
 
 const sess = {
   secret: 'Super secret secret',
@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-app.listen(process.env.PORT || 3001);
+// app.listen(process.env.PORT || 3001);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
