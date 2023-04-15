@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Library, Blog } = require('../models');
+const { Blog, Comment, Library, User } = require('../models');
 
 // GET all libraries for homepage
 router.get('/', async (req, res) => {
@@ -69,12 +69,29 @@ router.get('/blog/:id', async (req, res) => {
 
     const blog = blogData.get({ plain: true });
     res.render('blog', { 
-      blog, 
+      blog,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
+  }
+});
+
+router.get('/post', async (req, res) => {
+  try {
+    const postsData = await User.findByPk(req.session.user_id, {
+      // attributes: { exclude: ['password'] },
+      include: [{ model: Blog }],
+    });
+    const posts = postsData.get({ plain: true });
+    res.render('post', {
+      ...posts,
+      style: 'posts.css',
+      logged_in: req.session.logged_in,
+    });
+  } catch (error) {
+    res.status(500).json(error);
   }
 });
 
@@ -88,3 +105,39 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      // {
+      //   where: {
+      //     library_id: req.params.id // here trying to load all blogs that match the selected library id
+      //   },
+      // },

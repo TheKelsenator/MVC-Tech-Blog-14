@@ -12,4 +12,23 @@
 .blog-header {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+
+.blog-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-left: 5%;
+  padding-right:5%;
+}
+
+.blog-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 5%;
 }
