@@ -11,7 +11,7 @@ const seedAll = async () => {
     returning: true,
   });
   for (const library of seedLibrary) {
-    await Library.findAll({
+    await Library.create({
       ...library,
       library_id: library[seedLibrary.library],
     });

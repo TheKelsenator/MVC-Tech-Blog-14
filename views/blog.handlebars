@@ -1,17 +1,16 @@
-{{#if loggedIn}}
-
-{{#each blogs as |blog|}}
-{{> blog-details}}
-{{/each}}
-
-<section class="blog">
-  <h3>{{blog.title}}</h3>
-  <div class="blog-details">
-    <p>By: {{blog.post_creator}}</p>
+<section class="card blog-card">
+  {{#if logged_in}}  
+  <div class="blog-header">  
+    <h3>{{blog.title}}</h3>
+  </div>
+  <div>
+    {{#each blog as |blog|}}
+    {{/each}}
+    <div class="blog-details">
+      <p>{{blog.contents}}</p>
+    </div>
+    <p>By: {{blog.username}}</p>
     <p>Published: {{blog.publish_date}}</p>
-    <p></p>
-    <p>{{blog.contents}}</p>
-    <p>{{blog.library_id}}</p>
   </div>
 </section>
 {{else}}

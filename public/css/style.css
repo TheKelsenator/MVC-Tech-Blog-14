@@ -39,9 +39,10 @@ body {
 
 .library-card {
   margin-top: 50px;
-  margin-left: 275px;
-  margin-right: 275px;
+  margin-left: 75px;
+  margin-right: 75px;
   margin-bottom: 35px;
+  padding: 15px;
   background-color: #edc79b;
   border-color: #713e5a;
   border-radius: 15px;

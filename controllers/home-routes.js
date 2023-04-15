@@ -8,7 +8,12 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Blog,
-          attributes: ['title', 'contents', 'post_creator', 'date_created'],
+          attributes: [
+            'title', 
+            'contents', 
+            'user_id', 
+            'publish_date'
+          ],
         },
       ],
     });
@@ -16,7 +21,7 @@ router.get('/', async (req, res) => {
     const libraries = libraryData.map((library) =>
       library.get({ plain: true })
     );
-    res.render('home', {
+    res.render('Library', {
       libraries,
       logged_in: req.session.logged_in,
     });
@@ -37,8 +42,8 @@ router.get('/library/:id', async (req, res) => {
             'id',
             'title',
             'contents',
-            'post_creator',
-            'date_created',
+            'user_id',
+            'publish_date',
             'library_id',
           ],
         },
@@ -46,7 +51,11 @@ router.get('/library/:id', async (req, res) => {
     });
 
     const library = libraryData.get({ plain: true });
-    res.render('library', { library, logged_in: req.session.logged_in });
+    res.render('library', { 
+      library, 
+      style: 'blog.css',
+      logged_in: req.session.logged_in, 
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -59,7 +68,10 @@ router.get('/blog/:id', async (req, res) => {
     const blogData = await Blog.findByPk(req.params.id);
 
     const blog = blogData.get({ plain: true });
-    res.render('blog', { blog, logged_in: req.session.logged_in});
+    res.render('blog', { 
+      blog, 
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

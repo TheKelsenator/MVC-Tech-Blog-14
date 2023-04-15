@@ -1,9 +1,9 @@
 <section class="container library">
+  {{#if logged_in}}
   <h3 class="library-name">{{library.name}}</h3>
-  {{#if loggedIn}}
   <section class="flex-row justify-center">
-    {{#each library.blogs as |blog|}}
-    {{> blog-details}}
+    {{#each libraries as |blog|}}
+    {{> library-details}}
     {{/each}}
   </section>
 </section>
