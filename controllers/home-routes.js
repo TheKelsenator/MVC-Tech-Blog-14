@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     const libraries = libraryData.map((library) =>
       library.get({ plain: true })
     );
-    res.render('Library', {
+    res.render('library', {
       libraries,
       logged_in: req.session.logged_in,
     });
