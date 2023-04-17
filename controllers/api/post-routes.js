@@ -4,8 +4,8 @@ const { Blog, Comment } = require('../../models');
 // ENDPOINT
 router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findAll({
-      include: [{ model: Comment }],
+    const postData = await Blog.findAll({
+      // include: [{ model: Comment }],
     });
     res.status(200).json(postData);
   } catch (error) {
