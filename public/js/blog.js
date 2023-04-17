@@ -2,12 +2,12 @@ const blogHandler = async (event) => {
   event.preventDefault();
 
   const title = document.querySelector('#new-blog-title').value.trim();
-  const content = document.querySelector('#new-blog-content').value.trim();
+  const contents = document.querySelector('#new-blog-content').value.trim();
 
-  if (title && content) {
+  if (title && contents) {
     const response = await fetch('/api/post', {
       method: 'POST',
-      content: JSON.stringify({title, content}),
+      body: JSON.stringify({title, contents}),
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {

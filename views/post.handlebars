@@ -11,27 +11,30 @@
       <h4>Blog content: </h4>
       <textarea id="new-blog-content" cols="80" rows="8"></textarea>
     </div>
-    <div class="input-blog-details">
+    {{!-- <div class="input-blog-details">
       <h4>By: </h4>
       <textarea id="insert-username" cols="30" rows="1"></textarea>
-    </div>
-    <div class="input-blog-details"> 
+    </div> --}}
+    {{!-- <div class="input-blog-details"> 
       <h4>Published: </h4>
       <textarea id="insert-date-published" cols="30" rows="1"></textarea>
-    </div>
-    <div class="input-blog-details">
+    </div> --}}
+    {{!-- <div class="input-blog-details">
       <h4>Category: </h4>
       <textarea id="select-library" cols="30" rows="1"></textarea>
-    </div>
+    </div> --}}
   </form>
   <div class="post-it-button">
   <button id="post-button"><h1>Post It!</h1></button>
   </div>
 </section>
-{{!-- <section class="card my-posts">
+<section class="card my-posts">
   <div>
-    {{#if blog}}
-    {{#each blog as |post|}}
+    {{#each blogs as |post|}}
+    <h3>{{post.title}}</h3>
+    <p>{{post.contents}}</p>
     {{/each}}
   </div>
-</section> --}}
+</section>
+
+<script src="/js/blog.js"></script>

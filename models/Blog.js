@@ -21,7 +21,7 @@ Blog.init(
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -32,7 +32,7 @@ Blog.init(
     },
     publish_date: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     library_id: {
       type: DataTypes.INTEGER,
