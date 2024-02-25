@@ -1,6 +1,6 @@
 const blogHandler = async (event) => {
   event.preventDefault();
-
+  console.log("random");
   const title = document.querySelector('#new-blog-title').value.trim();
   const contents = document.querySelector('#new-blog-content').value.trim();
 
@@ -11,6 +11,7 @@ const blogHandler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
     });
     if (response.ok) {
+      console.log(response);
       document.location.replace('/post');
     } else {
       alert(response.statusText);
@@ -21,3 +22,5 @@ const blogHandler = async (event) => {
 document
 .querySelector('#post-button')
 .addEventListener('click', blogHandler);
+
+// click event
