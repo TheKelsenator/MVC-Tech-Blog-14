@@ -1,9 +1,5 @@
 # Weekly Challenge: Fourteen -
 
-  <a href="https://choosealicense.com/licenses/mit">
-  <img src="https://img.shields.io/badge/License-MIT-blue" />
-  </a>
-
 ## Model-View-Controller (MVC) Challenge: Tech Blog
 
   University of Utah
@@ -13,17 +9,17 @@
 
 ## Description
 
-  Build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers' posts as well.
+  The Tech Blog CMS is a versatile platform designed for developers who write about technology, providing them with a user-friendly interface to publish articles, blog posts, and share their thoughts and opinions with the community.
 
 ## Table of Contents
 
-- [User Story](#user)
-- [Acceptance Criteria](#acceptance)
-- [License](#license)
-- [Links](#links)
-- [Contribution](#contribution)
-- [Screenshots](#screenshots)
-- [Contact Me](#contact)
+  - [User Story](#user-story)
+  - [Acceptance Criteria](#acceptance-criteria)
+  - [Key Features](#key-features)
+  - [License](#license)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+  - [Contact Me](#contact-me)
 
 ## User Story
 
@@ -67,26 +63,36 @@
   * WHEN I am idle on the site for more than a set time
   * THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 
+## Key Features
+
+  * Homepage Navigation: Users are greeted with a homepage featuring existing blog posts, navigation links, and the option to log in.
+  * User Authentication: Secure user authentication allows users to sign up, sign in, and access personalized features.
+  * Dashboard Access: Signed-in users have access to a dashboard displaying existing blog posts and the option to add new ones.
+  * Blog Post Management: Users can create, update, and delete blog posts directly from the dashboard.
+  * Comment System: A comment system enables interaction with blog posts, allowing users to leave comments and engage with the content.
+  * Session Management: Users remain logged in during their session but are prompted to log in again after a period of inactivity for enhanced security.
+
 ## License
 
   This project is licensed under the terms of the MIT license.
   [License Information](https://choosealicense.com/licenses/mit)
+  <br/>
+  <br/>
+  <a href="https://choosealicense.com/licenses/mit">
+  <img src="https://img.shields.io/badge/License-MIT-blue" />
+  </a>
 
-
-## Links
-
-
-
-  https://github.com/TheKelsenator/bronze-mouse-14
-
-## Contribution
-
-  Github [TheKelsenator](https://github.com/TheKelsenator)
 
 ## Screenshots
 
- ![]()
+ ![alt_img](./assets/images/Screenshot (117).png)
+ ![alt_img](./assets/images/Screenshot (118).png)
+
+## Links
+
+  * Application Link: https://calm-ravine-55136.herokuapp.com/
+  * LinkedIn Profile: https://www.linkedin.com/in/kelsey-o-kelley-23057a20b/
 
 ## Contact Me
 
-  Email [km.okelley89@gmail.com](mailto:km.okelley89@gmail.com)
+  Feel free to reach out to me via email at km.okelley89@gmail.com or through my LinkedIn.
